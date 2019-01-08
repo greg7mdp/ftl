@@ -38,6 +38,9 @@ matrix:
 before_install:
   - eval "${MATRIX_EVAL}"
 
+dist: trusty
+sudo: false
+
 script:
   - cd tests
   - cmake ./
