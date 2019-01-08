@@ -16,22 +16,11 @@ matrix:
     addons:
       apt:
         sources:
-          - llvm-toolchain-trusty-5.0
-        packages:
-          - clang-5.0
-          - libc++-dev
-    env:
-      - MATRIX_EVAL="CC=clang-5.0 && CXX=clang++-5.0"
-
-  - os: linux
-    addons:
-      apt:
-        sources:
           - ubuntu-toolchain-r-test
           - llvm-toolchain-trusty-6.0
         packages:
           - clang-6.0
-          - libc++-dev
+          - libstdc++-7-dev
     env:
       - MATRIX_EVAL="CC=clang-6.0 && CXX=clang++-6.0"
 
