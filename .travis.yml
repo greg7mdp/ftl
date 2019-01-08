@@ -51,7 +51,7 @@ before_install:
 
 script:
   - cd tests
-  - cmake -DCMAKE_EXE_LINKER_FLAGS=${LINKER_FLAGS} ./
+  - cmake ./
   - cmake --build . -- VERBOSE=1
   - ./ftl_tests
 
