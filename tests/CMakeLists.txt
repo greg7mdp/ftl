@@ -12,9 +12,9 @@ if(CMAKE_COMPILER_IS_GNUCXX)
 
 elseif(${CMAKE_CXX_COMPILER_ID} STREQUAL Clang)
 
-	set(CMAKE_CXX_FLAGS "${CMAKE_CXX_FLAGS} -stdlib=libc++ -pedantic -Wall -Wextra -std=c++17 -DFTL_CPP14")
+	set(CMAKE_CXX_FLAGS "${CMAKE_CXX_FLAGS} -pedantic -Wall -Wextra -std=c++17 -DFTL_CPP14")
 	set(CMAKE_CXX_FLAGS_DEBUG "${CMAKE_CXX_FLAGS_DEBUG} -O0 -g")
-	set(CMAKE_EXE_LINKER_FLAGS "${CMAKE_EXE_LINKER_FLAGS} -pthread -lc++")
+	set(CMAKE_EXE_LINKER_FLAGS "${CMAKE_EXE_LINKER_FLAGS} -pthread")
 
 elseif(${CMAKE_CXX_COMPILER_ID} STREQUAL MSVC)
 
