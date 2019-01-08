@@ -5,32 +5,43 @@ matrix:
     addons:
       apt:
         sources:
-        - ubuntu-toolchain-r-test
+          - ubuntu-toolchain-r-test
         packages:
-        - g++-8
+          - g++-8
     env:
-    - MATRIX_EVAL="CC=gcc-8 && CXX=g++-8"
-    - LINKER_FLAGS=""
+      - MATRIX_EVAL="CC=gcc-8 && CXX=g++-8"
 
   - os: linux
     addons:
       apt:
         sources:
-        - ubuntu-toolchain-r-test
-        - llvm-toolchain-trusty-6.0
-        - sourceline: 'deb http://apt.llvm.org/trusty/ llvm-toolchain-trusty-6.0 main'
+          - llvm-toolchain-trusty-5.0
+        packages:
+          - clang-5.0
+    env:
+      - MATRIX_EVAL="CC=clang-5.0 && CXX=clang++-5.0"
+
+  - os: linux
+    addons:
+      apt:
+        sources:
+          - ubuntu-toolchain-r-test
+          - llvm-toolchain-trusty-6.0
+          - sourceline: 'deb http://apt.llvm.org/trusty/ llvm-toolchain-trusty-6.0 main'
           key_url: 'https://apt.llvm.org/llvm-snapshot.gpg.key'
         packages:
         - clang-6.0
         - libstdc++-7-dev
     env:
-    - MATRIX_EVAL="CC=clang-6.0 && CXX=clang++-6.0"
+      - MATRIX_EVAL="CC=clang-6.0 && CXX=clang++-6.0"
+
+  - os: osx
+    osx_image: xcode8
+    env:
+      - MATRIX_EVAL="brew install gcc && CC=gcc-7 && CXX=g++-7"
 
 before_install:
-- eval "${MATRIX_EVAL}"
-
-dist: trusty
-sudo: false
+  - eval "${MATRIX_EVAL}"
 
 script:
   - cd tests
