@@ -1,7 +1,7 @@
 FTL - The Functional Template Library
 =====================================
 
-[![Build Status](https://travis-ci.org/beark/ftl.png?branch=master)](https://travis-ci.org/beark/ftl)
+[![Build Status](https://travis-ci.org/greg7mdp/ftl.png?branch=master)](https://travis-ci.org/greg7mdp/ftl)
 
 C++ template library for fans of functional programming.
 
