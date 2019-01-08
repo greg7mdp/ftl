@@ -28,11 +28,11 @@ matrix:
     addons:
       apt:
         sources: 
+          - ubuntu-toolchain-r-test
           - llvm-toolchain-trusty-5.0
         packages:
           - clang-5.0
-          - libc++-dev
-          - libc++abi-dev
+          - libstdc++-7-dev
     env: 
       - MATRIX_EVAL="CC=clang-5.0 && CXX=clang++-5.0"
 
