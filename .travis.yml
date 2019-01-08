@@ -7,6 +7,17 @@ matrix:
         sources:
           - ubuntu-toolchain-r-test
         packages:
+          - g++-7
+    env:
+    - MATRIX_EVAL="CC=gcc-7 && CXX=g++-7"
+    - LINKER_FLAGS=""
+
+  - os: linux
+    addons:
+      apt:
+        sources:
+          - ubuntu-toolchain-r-test
+        packages:
           - g++-8
     env:
     - MATRIX_EVAL="CC=gcc-8 && CXX=g++-8"
@@ -21,6 +32,7 @@ matrix:
         packages:
           - clang-5.0
           - libc++-dev
+          - libc++abi-dev
     env: 
       - MATRIX_EVAL="CC=clang-5.0 && CXX=clang++-5.0"
 
@@ -34,6 +46,7 @@ matrix:
         packages:
           - clang-6.0
           - libc++-dev
+          - libc++abi-dev
     env:
       - MATRIX_EVAL="CC=clang-6.0 && CXX=clang++-6.0"
 
