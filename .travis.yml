@@ -34,7 +34,8 @@ matrix:
           - llvm-toolchain-trusty-5.0
         packages:
           - clang-5.0
-          - libstdc++-7-dev
+          - libc++-7-dev 
+          - libc++abi-7-dev
     env: 
       - MATRIX_EVAL="CC=clang-5.0 && CXX=clang++-5.0"
 
@@ -47,7 +48,8 @@ matrix:
           - llvm-toolchain-trusty-6.0
         packages:
           - clang-6.0
-          - libstdc++-8-dev
+          - libc++-7-dev 
+          - libc++abi-7-dev
     env:
       - MATRIX_EVAL="CC=clang-6.0 && CXX=clang++-6.0"
 
