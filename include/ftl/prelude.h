@@ -429,7 +429,7 @@ namespace ftl {
 	 * \ingroup prelude
 	 */
 	template<typename F, typename...Fs>
-	auto compose(F&& f, Fs&&...fs) -> decltype(auto) {
+	decltype(auto) compose(F&& f, Fs&&...fs) {
 		return compose(std::forward<F>(f), compose(std::forward<Fs>(fs)...));
 	}
 
