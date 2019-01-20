@@ -2,7 +2,10 @@ language: cpp
 matrix:
   include:
   - os: windows
+    env:
+      - MSBUILD_PATH="c:\Program Files (x86)\Microsoft Visual Studio\2017\BuildTools\MSBuild\15.0\Bin"
     script:
+      - export PATH=$MSBUILD_PATH:$PATH
       - cd tests
       - cmake ./
       - msbuild.exe FTL.sln /p:Configuration=Release
