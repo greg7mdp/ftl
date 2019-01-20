@@ -5,8 +5,8 @@ matrix:
     script:
       - cd tests
       - cmake ./
-      - devenv /build Release FTL.sln
-      - ./ftl_tests     
+      - msbuild.exe FTL.sln /p:Configuration=Release
+      - ./Release/ftl_tests.exe     
 
   - os: linux
     compiler: g++-5
