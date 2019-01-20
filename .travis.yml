@@ -1,16 +1,16 @@
 language: cpp
 matrix:
   include:
-  - os: windows
-    env:
-      - MSBUILD_PATH="c:/Program Files (x86)/Microsoft Visual Studio/2017/BuildTools/MSBuild/15.0/Bin"
-      - MSBUILD_PATH2="c:/Program Files (x86)/Microsoft Visual Studio/2017/Community/MSBuild/15.0/Bin"
-    script:
-      - export PATH=$PATH:$MSBUILD_PATH:$MSBUILD_PATH2
-      - cd tests
-      - cmake ./
-      - msbuild.exe FTL.sln /p:Configuration=Release
-      - ./Release/ftl_tests.exe     
+#  - os: windows
+#    env:
+#      - MSBUILD_PATH="c:/Program Files (x86)/Microsoft Visual Studio/2017/BuildTools/MSBuild/15.0/Bin"
+#      - MSBUILD_PATH2="c:/Program Files (x86)/Microsoft Visual Studio/2017/Community/MSBuild/15.0/Bin"
+#    script:
+#      - export PATH=$PATH:$MSBUILD_PATH:$MSBUILD_PATH2
+#      - cd tests
+#      - cmake ./
+#      - msbuild.exe FTL.sln /p:Configuration=Release
+#      - ./Release/ftl_tests.exe     
 
   - os: linux
     compiler: g++-5
