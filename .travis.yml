@@ -2,6 +2,18 @@ language: cpp
 matrix:
   include:
   - os: linux
+    compiler: g++-5
+    addons:
+      apt:
+        sources:
+          - ubuntu-toolchain-r-test
+        packages:
+          - g++-5
+    env:
+    - MATRIX_EVAL="CXX=g++-5"
+    - LINKER_FLAGS=""
+
+  - os: linux
     compiler: g++-7
     addons:
       apt:
@@ -10,7 +22,7 @@ matrix:
         packages:
           - g++-7
     env:
-    - MATRIX_EVAL="CC=gcc-7 && CXX=g++-7"
+    - MATRIX_EVAL="CXX=g++-7"
     - LINKER_FLAGS=""
 
   - os: linux
@@ -22,8 +34,34 @@ matrix:
         packages:
           - g++-8
     env:
-    - MATRIX_EVAL="CC=gcc-8 && CXX=g++-8"
+    - MATRIX_EVAL="CXX=g++-8"
     - LINKER_FLAGS=""
+
+  - os: linux
+    compiler: clang-3.6
+    addons:
+      apt:
+        sources: 
+          - ubuntu-toolchain-r-test
+          - llvm-toolchain-trusty-3.6
+        packages:
+          - clang-3.6
+          - libstdc++-7-dev
+    env: 
+      - MATRIX_EVAL="CXX=clang++-3.6"
+
+  - os: linux
+    compiler: clang-4
+    addons:
+      apt:
+        sources: 
+          - ubuntu-toolchain-r-test
+          - llvm-toolchain-trusty-4.0
+        packages:
+          - clang-4.0
+          - libstdc++-7-dev
+    env: 
+      - MATRIX_EVAL="CXX=clang++-4.0"
 
   - os: linux
     compiler: clang-5
@@ -36,7 +74,7 @@ matrix:
           - clang-5.0
           - libstdc++-7-dev
     env: 
-      - MATRIX_EVAL="CC=clang-5.0 && CXX=clang++-5.0"
+      - MATRIX_EVAL="CXX=clang++-5.0"
 
   - os: linux
     compiler: clang-6
@@ -49,7 +87,7 @@ matrix:
           - clang-6.0
           - libstdc++-8-dev
     env:
-      - MATRIX_EVAL="CC=clang-6.0 && CXX=clang++-6.0"
+      - MATRIX_EVAL="CXX=clang++-6.0"
 
   - os: osx
     osx_image: xcode10.1
