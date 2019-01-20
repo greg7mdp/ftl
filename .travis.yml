@@ -2,6 +2,11 @@ language: cpp
 matrix:
   include:
   - os: windows
+    script:
+      - cd tests
+      - cmake ./
+      - devenv /build Release FTL.sln
+      - ./ftl_tests     
 
   - os: linux
     compiler: g++-5
@@ -106,6 +111,6 @@ sudo: false
 script:
   - cd tests
   - cmake ./
-  - make
+  - cmake --build . -- VERBOSE=1
   - ./ftl_tests
 
