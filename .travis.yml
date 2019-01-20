@@ -1,6 +1,8 @@
 language: cpp
 matrix:
   include:
+  - os: windows
+
   - os: linux
     compiler: g++-5
     addons:
