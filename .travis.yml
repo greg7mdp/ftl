@@ -106,6 +106,6 @@ sudo: false
 script:
   - cd tests
   - cmake ./
-  - cmake --build . -- VERBOSE=1
+  - make
   - ./ftl_tests
 
