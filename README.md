@@ -9,9 +9,9 @@ This project is currently on hiatus. Not sure when/if I'll resume work on it.
 
 If you want to play around with it anyway, you need to compile in C++14 mode. 
 The following compilers are supported:
-  - gcc-5.0 or later
-  - clang-3.6 or later
-  - Visual Studio 2017 
+  - gcc-5.0 and later
+  - clang-3.6 and later
+  - Visual Studio 2017 and later
 
 Tutorials
 ---------
