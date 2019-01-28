@@ -3,11 +3,15 @@ FTL - The Functional Template Library
 
 [![Build Status](https://travis-ci.org/greg7mdp/ftl.png?branch=master)](https://travis-ci.org/greg7mdp/ftl)
 
-C++ template library for fans of functional programming.
+C++ template library (header only) for fans of functional programming.
 
 This project is currently on hiatus. Not sure when/if I'll resume work on it.
 
-If you want to play around with it anyway, you need to compile in C++11 mode with gcc-4.8 or later or clang-3.2 or later. Not sure if newer MSVC versions would work or not.
+If you want to play around with it anyway, you need to compile in C++14 mode. 
+The following compilers are supported:
+  - gcc-5.0 or later
+  - clang-3.6 or later
+  - Visual Studio 2017 
 
 Tutorials
 ---------
